@@ -15,7 +15,7 @@ function App() {
         <Route path="about" element={<About />} />
 
         <Route path="categories" element={<Categories />}>
-          <Route path="category" element={<Category />} />
+          <Route path=":catid" element={<Category />} />
         </Route>
         <Route
           path="*"
