@@ -4,8 +4,10 @@ import Home from "./Home";
 import Categories from "./Categories";
 import About from "./About";
 import Header from "./Header";
+import Register from "./Register";
 import Category from "./Category";
 import Session from "./Session";
+import Confirmation from "./Confirmation";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           </Route>
           <Route index element={<h3>Select a caategory from above</h3>} />
         </Route>
+
+        <Route path="register" element={<Register />} />
+        <Route path="confirmed" element={<Confirmation />} />
         <Route
           path="*"
           element={<h1 className="not-found"> Page not found</h1>}
