@@ -1,5 +1,4 @@
 import { Routes, Route, Link } from "react-router-dom";
-import logo from "../assets/red30-tech-logo.png";
 
 import Home from "./Home";
 import Categories from "./Categories";
