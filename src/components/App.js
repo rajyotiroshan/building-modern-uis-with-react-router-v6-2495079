@@ -3,25 +3,17 @@ import logo from "../assets/red30-tech-logo.png";
 
 import Home from "./Home";
 import Categories from "./Categories";
+import About from "./About";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="app">
-      <header className="container">
-        <img
-          className="logo"
-          src={logo}
-          alt="Red30 Tech logo"
-          title="Red30 Tech | Home"
-        />
-
-        <nav>
-          <Link to="/categories">Categories</Link>
-        </nav>
-      </header>
-
+      <Header />
       <Routes>
         <Route path="/" element={<Home title="Welcome to Red30 Tech" />} />
+        <Route path="about" element={<About />} />
+
         <Route path="categories" element={<Categories />} />
       </Routes>
 
