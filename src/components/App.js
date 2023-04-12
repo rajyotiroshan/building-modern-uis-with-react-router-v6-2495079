@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import About from "./About";
 import Header from "./Header";
 import Category from "./Category";
+import Session from "./Session";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
         <Route path="about" element={<About />} />
 
         <Route path="categories" element={<Categories />}>
-          <Route path=":catid" element={<Category />} />
+          <Route path=":catId" element={<Category />}>
+            <Route path=":sessionId" element={<Session />} />
+          </Route>
         </Route>
         <Route
           path="*"
