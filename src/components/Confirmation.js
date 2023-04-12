@@ -5,7 +5,7 @@ export default function Confirmation() {
     <div className="container">
       <h1>Thank You!</h1>
       <p>
-        You're now registered for Red30 Tech.
+        Thank You <b>Mr. {state.name}</b> for registering for Red30 Tech.
         {state && (
           <span>
             {" "}

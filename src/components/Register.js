@@ -4,10 +4,13 @@ import { useNavigate } from "react-router";
 export default function Register() {
   const navigate = useNavigate();
   const emailRef = useRef(null);
+  const nameRef = useRef();
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate("/confirmed", { state: { email: emailRef.current.value } });
+    navigate("/confirmed", {
+      state: { email: emailRef.current.value, name: nameRef.current.value },
+    });
   }
 
   return (
@@ -22,6 +25,10 @@ export default function Register() {
         <label>
           Email:
           <input type="text" name="email" ref={emailRef} />
+        </label>
+        <label>
+          Full name:
+          <input type="text" name="name" ref={nameRef} />
         </label>
         <input type="submit" value="Submit" />
       </form>
